@@ -4,7 +4,7 @@ import sqlalchemy.orm
 Base = sqlalchemy.orm.declarative_base()
 
 class BaseProduto(Base):
-    __table__ = 'produtos'
+    __tablename__ = 'produtos'
     
     id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     nome = sa.Column(sa.Text, nullable=False)
