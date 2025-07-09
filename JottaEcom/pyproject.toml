@@ -1,0 +1,25 @@
+[project]
+name = "jottaecom"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "JoaoSantos6",email = "78502928+JoaoSantos6@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "sqlalchemy (>=2.0.41,<3.0.0)",
+    "fastapi[standard] (>=0.116.0,<0.117.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+taskipy = "^1.14.1"
+ruff = "^0.12.1"
+

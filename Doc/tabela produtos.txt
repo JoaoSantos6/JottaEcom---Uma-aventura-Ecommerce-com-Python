@@ -1,0 +1,34 @@
+-- Criação da tabela
+CREATE TABLE produtos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    valor REAL,
+    nota REAL,
+    quantidade INTEGER,
+    descricao TEXT,
+    avaliacoes TEXT,  -- Pode ser JSON ou texto serializado
+    imagens TEXT      -- Pode ser JSON ou texto serializado
+);
+
+-- Exemplos de inserts
+INSERT INTO produtos (nome, valor, nota, quantidade, descricao, avaliacoes, imagens)
+VALUES (
+    'Camiseta Básica',
+    49.90,
+    4.5,
+    100,
+    'Camiseta de algodão confortável.',
+    '[{"usuario": "joao", "comentario": "Ótima qualidade!"}]',
+    '["img1.jpg", "img2.jpg"]'
+);
+
+INSERT INTO produtos (nome, valor, nota, quantidade, descricao, avaliacoes, imagens)
+VALUES (
+    'Tênis Esportivo',
+    199.99,
+    4.8,
+    50,
+    'Tênis leve e resistente para corrida.',
+    '[{"usuario": "maria", "comentario": "Muito confortável!"}]',
+    '["tenis1.jpg", "tenis2.jpg"]'
+);
