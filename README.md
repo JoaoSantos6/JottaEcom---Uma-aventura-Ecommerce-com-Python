@@ -21,8 +21,8 @@ Abaixo, exemplos de relatórios de cobertura de testes:
 
 ### Caso de sucesso (100% das funções cobertas)
 
-![Cobertura 100%](../Doc/img/coverage_na_web_sucesso.PNG)
+![Cobertura 100%](/Doc/img/coverage_na_web_sucesso.PNG)
 
 ### Caso com parte da função não testada
 
-![Cobertura parcial](../Doc/img/coverage_parte_nao_testada.PNG)
+![Cobertura parcial](/Doc/img/coverage_parte_nao_testada.PNG)
