@@ -34,6 +34,9 @@ class SqlAlchemyManager:
             print(f"Erro ao conectar ao banco de dados: {e}")
             return False
         
+    def dispose_engine(self):
+        self.engine.dispose()
+        
         
     
         

@@ -10,10 +10,17 @@ from db_connectors.sql_alchemy_manager import SqlAlchemyManager
 
 @pytest.fixture
 def manager():
-    return SqlAlchemyManager(db_config=None)
+    m = SqlAlchemyManager(db_config=None)
+    yield m
+    m.dispose_engine()
 
 def test_is_connected(manager):
     assert manager.is_connected() is True
+    
+def test_context_manager_methods():
+    manager = SqlAlchemyManager(db_config=None)
+    with manager as db:
+        assert db.session is not None
     
 def test_busca_linha_unica(manager):
     
@@ -38,6 +45,8 @@ def test_insere_linha_tabela(manager):
         imagens='[]'
     )
 
+    print(novo_produto)
+    
     with manager as db:
         db.session.add(novo_produto)
         db.session.commit()
